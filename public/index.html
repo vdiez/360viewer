@@ -9,14 +9,13 @@
 <body>
 <center>
     <video id="livestream" class="video-js vjs-default-skin vjs-big-play-centered" controls autoplay preload="auto" width="600" height="300" data-setup='{"techorder" : ["flash"] }'>
-        <source src="rtmp://10.67.64.67/live/test" type="rtmp/mp4">
     </video>
 </center>
 </body>
 <script>
-    videojs.options.flash.swf = "video-js.swf";/*
+    videojs.options.flash.swf = "video-js.swf";
     var player = videojs('livestream');
-
-    player.bitrateGraph({ bitrates: [4, 8, 3] });*/
+    player.src({type: "rtmp/mp4", src: "rtmp://" + location.hostname + "/live/test"})
+    //player.bitrateGraph({ bitrates: [4, 8, 3] });
 </script>
 </html>
