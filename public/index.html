@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title> Stream Player </title>
+    <link href="video-js.min.css" rel="stylesheet" type="text/css">
+    <script src="video.min.js"></script>
+    <script src="videojs-flash.min.js"></script>
+    <script src="videojs-bitrate-graph.min.js"></script>
+</head>
+<body>
+<center>
+    <video id="livestream" class="video-js vjs-default-skin vjs-big-play-centered" controls autoplay preload="auto" width="600" height="300" data-setup='{"techorder" : ["flash"] }'>
+        <source src="rtmp://10.67.64.67/live/test" type="rtmp/mp4">
+    </video>
+</center>
+</body>
+<script>
+    videojs.options.flash.swf = "video-js.swf";/*
+    var player = videojs('livestream');
+
+    player.bitrateGraph({ bitrates: [4, 8, 3] });*/
+</script>
+</html>
